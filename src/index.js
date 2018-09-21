@@ -5,9 +5,11 @@ import App from "./App";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 
-import postReducer from "./Configuration/Post/postReducer";
+import landingPageReducer from "./Components/LandingPageReducer";
 
-const store = createStore(postReducer);
+// import postReducer from "./Configuration/Post/postReducer";
+
+const store = createStore(landingPageReducer);
 
 ReactDOM.render(
   <Provider store={store}>
