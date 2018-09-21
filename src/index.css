@@ -1,0 +1,17 @@
+.post {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+.post .title {
+  width: 20%;
+  display: inline-block;
+}
+
+.post .message {
+  width: 80%;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
