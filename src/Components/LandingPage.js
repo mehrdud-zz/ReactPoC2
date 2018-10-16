@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Logger, ConsoleLogger } from "react-console-logger";
-const myLogger = new Logger();
+import Dashboard from "./Dashboard";
 
 class LandingPage extends Component {
   constructor(props) {
@@ -14,34 +13,20 @@ class LandingPage extends Component {
   }
   render() {
     const dashboard2 = this.state.dashboard;
-    let button;
 
-    if (dashboard2 == "Dashboard") {
-      button = (
-        <input
-          type="button"
-          value="Show strategies"
-          onClick={this.showStrategy}
-        />
+    if (dashboard2 === "Dashboard") {
+      return (
+        <div>
+          <Dashboard />
+        </div>
       );
     } else {
-      button = (
-        <input
-          type="button"
-          value="Show Dashboard"
-          onClick={this.showDashboard}
-        />
+      return (
+        <div>
+          <h1>Multi Asset Core</h1>
+        </div>
       );
     }
-
-    return (
-      <div>
-        <h1>Test</h1>
-        {button}
-        {this.state.dashboard}
-        {dashboard2}
-      </div>
-    );
   }
 
   showDashboard() {
@@ -55,7 +40,7 @@ class LandingPage extends Component {
   }
 
   showThreads() {
-    this.state = { dashboard: "Threads" };
+    this.setState({ dashboard: "Threads" });
     console.log("Set dashboard to Threads");
   }
 }

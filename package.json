@@ -1,15 +1,16 @@
 {
-  "name": "new",
+  "name": "ma-core",
   "version": "1.0.0",
-  "description": "",
+  "description": "MA Core interface",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "axios": "0.18.0",
     "react": "16.4.2",
-    "react-console-logger": "0.0.2",
     "react-dom": "16.4.2",
     "react-redux": "5.0.7",
     "react-scripts": "1.1.4",
+    "react-table": "6.8.6",
     "redux": "4.0.0"
   },
   "devDependencies": {},

@@ -1,18 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "../public/index.css";
 import App from "./App";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 
-import landingPageReducer from "./Components/LandingPageReducer";
+import todos from "./Reducers/Todos";
 
-// import postReducer from "./Configuration/Post/postReducer";
-
-const store = createStore(landingPageReducer);
+const todosStore = createStore(todos);
 
 ReactDOM.render(
-  <Provider store={store}>
+  <Provider store={todosStore}>
     <App />
   </Provider>,
   document.getElementById("root")
